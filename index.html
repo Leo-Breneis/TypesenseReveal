@@ -17,7 +17,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h3>Search Databases</h1>
+					<h3>Search Databases</h3>
 					<p>von Leo Breneis, Melanie Dohr, Luca Haas, <br/>Andreas Huber, Eros Klein</p>
 				</section>
 				<section>
@@ -67,12 +67,29 @@
 					Wie geht die Datenbank mit Mehrbenutzerbetrieb um (zB bei Anomalien wie Deadlocks)? Gibt es Transaktionen? (Nur kurz in der Theorie, muss nicht getestet werden!)
 				</section>
 				<section>
-					Luca:
-					Wo würden Sie Ihre Datenbank im CAP-Dreieck einordnen?
+					<h3>Wo würden Sie Ihre Datenbank im CAP-Dreieck einordnen?</h3>
+					<ul>
+						<li><strong>CP (Consistency & Partition Tolerance)</strong></li>
+						<li><strong>AP (Availability & Partition Tolerance)</strong></li>
+					</ul>
 				</section>
 				<section>
-					Luca:
-					Was sind die Vor- und Nachteile im Vergleich zu einer relationalen Datenbank?
+					<h3>Vorteile im Vergleich zu einer relationalen Datenbank?</h3>
+					<ul>
+						<li>Horizontale Skalierung (Sharding)</li>
+						<li>Dynamisches Schema, leicht erweiterbar</li>
+						<li>Eigene Query-Sprachen (z. B. CQL für Cassandra)</li>
+						<li>Un/Semi-strukturierte Daten</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Nachteile im Vergleich zu einer relationalen Datenbank?</h3>
+					<ul>
+						<li>Transaktionen</li>
+						<li>Verschwerte Datenmigration</li>
+						<li>Keine einheitliche Query Sprache</li>
+						<li>Komplexe Abfragen</li>
+					</ul>
 				</section>
 				<section>
 					Eros:
