@@ -9,8 +9,6 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
-
-		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
@@ -31,11 +29,11 @@
 				<section>
 					<h3>Welche konkreten Implementierungen gibt es für die Datenbank-Art?</h3>
 					<ul>
-						<li><strong>Algolia</strong></li>
-						<li><strong>ElasticSearch</strong></li>
-						<li><strong>Apache Solr</strong></li>
-						<li><strong>MeiliSearch</strong></li>
-						<li><strong>Typesense</strong></li>
+						<li>Algolia</li>
+						<li>ElasticSearch</li>
+						<li>Apache Solr</li>
+						<li>MeiliSearch</li>
+						<li>Typesense</li>
 					</ul>
 				</section>
 				<section>
@@ -48,29 +46,53 @@
 				<section>
 					<h3>Besonderheiten von Typesense</h3>
 					<ul>
-					  <li><strong>Hohe Geschwindigkeit & Effizienz</strong></li>
-					  <li><strong>Typo Tolerance</strong></li>
-					  <li><strong>Flexible, dynamische Sortierung & Filterung</strong></li>
-					  <li><strong>Intuitive, RESTful API</strong></li>
-					  <li><strong>Einfache Bereitstellung</strong></li>
+					  <li>Hohe Geschwindigkeit & Effizienz</li>
+					  <li>Typo Tolerance</li>
+					  <li>Flexible, dynamische Sortierung & Filterung</li>
+					  <li>Intuitive, RESTful API</li>
+					  <li>Einfache Bereitstellung</li>
 					</ul>
 				</section>
 				<section>
-					<h3>Wie ging es Ihnen beim Setup?</h3>
+					<h3>Konzepte, Schema und Beziehungen</h3>
+					<ul>
+						<li>Einträge bekommen Index nach Ähnlichkeit</li>
+						<li>Nicht-relational: keine Beziehungen</li>
+					</ul>
 				</section>
-				<section>
-					Melanie
-					Welche Konzepte gibt es zur Datenhaltung? Kann man ein Schema definieren? Wie werden Beziehungen dargestellt?
+				<section style="align-items: center; display: flex; flex-direction: column; justify-content: space-evenly; width: 100vw; height: 100vh">
+				<div >
+					<h3>Beispiel-Schema</h3>
+					<pre style="font-size: 1.5rem; text-align: left;">
+					<code>
+					{
+						&emsp;"name": "products",
+						&emsp;"fields": [
+							&emsp;&emsp;{ "name": "id", "type": "string", 'facet': true },
+							&emsp;&emsp;{ "name": "title", "type": "string", 'facet': true },
+							&emsp;&emsp;{ "name": "price", "type": "float" },
+							&emsp;&emsp;{ "name": "created_at", "type": "date" }
+						&emsp;],
+						&emsp;"default_sorting_field": "created_at"
+					}
+					</code>
+					</pre>
+				</div>
 				</section>
+				  
 				<section>
-					Melanie
-					Wie geht die Datenbank mit Mehrbenutzerbetrieb um (zB bei Anomalien wie Deadlocks)? Gibt es Transaktionen? (Nur kurz in der Theorie, muss nicht getestet werden!)
+					<h3>Wie geht die Datenbank mit Mehrbenutzerbetrieb um?</h3>
+					<ul>
+						<li>Keine Transaktionen</li>
+						<li>Keine ACID-Konformität</li>
+						<li>Eventuell Inkonsistenzen</li>
+					</ul>
 				</section>
 				<section>
 					<h3>Wo würden Sie Ihre Datenbank im CAP-Dreieck einordnen?</h3>
 					<ul>
-						<li><strong>CP (Consistency & Partition Tolerance)</strong></li>
-						<li><strong>AP (Availability & Partition Tolerance)</strong></li>
+						<li>CP (Consistency & Partition Tolerance)</li>
+						<li>AP (Availability & Partition Tolerance)</li>
 					</ul>
 				</section>
 				<section>
@@ -92,8 +114,8 @@
 					</ul>
 				</section>
 				<section>
-					Eros:
-					Wie kann man in der Datenbank Daten anlegen, ändern und löschen? Wie kann man Daten abfragen? (inkl. Live-Demo, siehe 1.3 und 1.4)
+					<h3>Live Demo</h3>
+					<p>Wie kann man in der Datenbank Daten anlegen, ändern und löschen?<br/> Wie kann man Daten abfragen?</p>
 				</section>
 			</div>
 		</div>
